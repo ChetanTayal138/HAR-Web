@@ -1,0 +1,62 @@
+version: '2.3'
+
+services:
+
+        
+        
+        
+
+        recorder:
+                image: recorder:latest
+
+                volumes:
+                        - ~/container-data/image_data:/app/custom_images
+                          
+                ports:
+                        - 5001:80
+
+                devices:
+                        - /dev/video0
+        
+
+        trainer:
+               image: trainer:latest
+
+               volumes:
+                       - ~/container-data/image_data:/app/data/custom_images
+                       - ~/container-data/config:/app/config
+                       - ~/container-data/model:/app/model
+
+               runtime: nvidia 
+
+               environment:
+                       - NVIDIA_VISIBLE_DEVICES=all
+
+               ports:
+                       - 5002:80
+
+
+        recognizer:
+                image: recognizer:latest
+                
+                volumes:
+                        - ~/container-data/config:/app/config
+                        - ~/container-data/model:/app/model
+
+                ports:
+                        - 5003:80
+                
+                runtime: nvidia
+
+                environment:
+                        - NVIDIA_VISIBLE_DEVICES=all
+
+                devices:
+                        - /dev/video0
+                        
+                        
+
+
+
+
+

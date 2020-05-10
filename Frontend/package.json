@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "front home page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChetanTayal138/WebActionRecognition.git"
+  },
+  "author": "Chetan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChetanTayal138/WebActionRecognition/issues"
+  },
+  "homepage": "https://github.com/ChetanTayal138/WebActionRecognition#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

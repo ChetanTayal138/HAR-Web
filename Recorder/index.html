@@ -1,0 +1,83 @@
+<html>
+<head>
+<style>
+
+body {
+	background-image: linear-gradient(grey,white);
+}
+
+
+.buttonone {
+  position: relative;
+  border: 3px solid black;
+  left: 40%;
+  top: 60%;
+  border-radius: 15px;
+  width: 10%;
+  background-image: linear-gradient(grey,white);
+  border: 2px solid black ;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.buttontwo {
+  position: relative;
+  border: 3px solid black;
+  left: 42%;
+  top: 60%;
+  border-radius: 15px;
+  width: 10%;
+  background-image: linear-gradient(grey,white);
+  border: 2px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+
+
+.center { 
+	border: 5px solid black;
+	border-radius: 12px;
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 45%;
+}
+
+
+
+
+</style>
+</head>
+	
+	<body>
+			
+		
+		<img id="image", class="center">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+		<script>
+			const socket = io.connect('http://localhost:5001');
+			socket.on('image', (image) => {
+				const imageElm = document.getElementById('image');
+				imageElm.src = 'data:image/jpeg;base64,' + image;
+				
+			});
+
+		</script>
+		<br>
+		<br>
+		<button type="button" onclick=window.location.href="/" class="buttonone">Record Another</button>
+		<button type="button" onclick=window.location.href="http://localhost:5002" class="buttontwo">Start Training</button>
+		
+
+
+	</body>
+</html>

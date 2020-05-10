@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style> 
+
+body { 
+	background-image: linear-gradient(to right,grey,white);
+
+}
+
+.form { 
+ position: fixed;
+ top: 22%;
+ left: 37%;
+ border: 5px solid black;
+ border-radius: 100px;
+ margin: 0 auto;
+ width: 500px;
+ height: 500px;
+ background-image: linear-gradient(to bottom, grey,white);
+ color: white;
+ vertical-align: bottom;
+ text-align: center;
+ 
+
+}
+
+.submit{
+  border-radius: 150px;
+  position: fixed;
+  top: 60%;
+  left: 42%;
+  background-color: gray;
+  border: 3px solid black;
+  color: white;
+  width: 15%;
+  padding: 16px 32px;
+  margin: 4px 20px;
+  cursor: pointer;
+
+}
+
+.action{
+ position: fixed;
+ top: 43%;
+ left: 43%;
+ height: 3%;
+ width: 15%;
+ border-radius: 5px;
+ 
+
+
+}
+
+    <meta charset="utf-8" />
+    <title></title>
+
+</style>
+</head>
+<body>
+    <form action="/submit-label" method="post" class="form">
+        GIVE YOUR ACTION: <input name="actionName" type="text" class="action"/><br/>
+        <input type="submit" class="submit"/>
+    </form>
+</body>
+</html>

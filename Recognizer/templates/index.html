@@ -1,0 +1,47 @@
+<html>
+  <head>
+  <style>
+  h1 { 
+	  position:relative;
+	  left: 45%;
+  }
+
+  .image{
+	border: 5px solid black;
+        border-radius: 12px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+	top: 55%;
+  }
+
+  .button{
+	  position:fixed;
+	  top:8%;
+	  left:5%;
+	  width:10%;
+          height:10%;
+	  border: 5px solid black;
+          border-radius: 12px;
+	  font-size : 20px;
+  }
+
+
+  body{
+	  background-image: linear-gradient(grey,white);
+  }
+
+
+
+  </style>
+  </head>
+  <body>
+    <h1>Video Feed</h1>
+    <img id="bg" src="{{url_for('video_feed')}}" class="image">
+    <button type="button" onclick=window.location.href="http://localhost:5000" class="button">Go Home</button>
+  </body>
+</html>
+~                                                                               
+~                                                                               
+~      

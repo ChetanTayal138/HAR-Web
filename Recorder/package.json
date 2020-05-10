@@ -1,0 +1,21 @@
+{
+  "name": "1.0",
+  "version": "1.0.0",
+  "description": "Video Recording on the web",
+  "main": "index.js",
+
+  "scripts":{
+
+    "start" : "node index.js"
+
+  },
+  
+  "dependencies": {
+    "express": "^4.16.3",
+    "shelljs": "^0.8.3",
+    "socket.io": "^2.1.1"
+  },
+
+  "author": "Chetan",
+  "license": "MIT"
+}
