@@ -6,7 +6,7 @@ COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-RUN pip3 install --upgrade pip &&\pip3 install -r requirements.txt &&/ pip3 install pycocotools numpy==1.18 Flask-Threads 
+RUN pip3 install --upgrade pip &&\pip3 install -r requirements.txt &&\pip3 install pycocotools numpy==1.18 Flask-Threads 
 
 COPY . /app
 
