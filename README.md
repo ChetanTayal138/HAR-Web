@@ -79,17 +79,33 @@ Built using [opencv4nodejs](https://www.npmjs.com/package/opencv4nodejs), which 
 A big advantage of using opencv4nodejs over using simply Flask for a task like this was because it provides an asynchronous API that allows built in multithreading and doesn't have to rely on something like Flask-Threads to avoid non-blocking calls.
 This is important in our application because it allows us to save record and save the frames on two seperate threads and leads to performance gains. 
 
+# 3. Trainer 
+
+The Trainer microservice uses a config file to carry out a 5-step training process which goes from generating heatmaps to extracting specific features mentioned in 1.3, carrying out PCA to reduce dimensionality of the feature vector and training a neural network on it. The config file is modified once the user selects to train their own model and generates a pickle file for the trained classifier that serves our predictions on the Flask server. 
+I have hardcoded HAR-Web to utilize 20-280 frames from the 300 frames that are recorded as training data but I plan on adding giving the user freedom to give exactly what number of frames to use and how many frames to record in the first place. 
 
 
+# 4. Frontend 
+
+This is a very basic service that serves the front page for the web app and routes to the particular service requested by the user accordingly. 
 
 
-## References and Links 
+![alt text](https://github.com/ChetanTayal138/HAR-Web/blob/master/Frontend/assets/rsz_recog.png)
+
+
+# 5. Future Work 
+
+Ideally I would like to deploy this on a cloud provider like AWS where anyone can access the service to recognize the actions as groups of 'presets' or train their own classes and use it on the go 
+
+# 6. References and Links 
 
 | Title | Link | 
-| ------ | ----- | 
-| 2 Stream Convolution | http://papers.nips.cc/paper/5353-two-stream-convolutional
+| ------ | ----- |
+| 2 Stream Convolution | http://papers.nips.cc/paper/5353-two-stream-convolutional | 
 | Temporal Segment Networks | https://link.springer.com/chapter/10.1007/978-3-319-46484-8_2 |
 | TS-LSTM  | https://arxiv.org/abs/1703.10667 | 
 | Human activity recognition from skeleton poses  | https://arxiv.org/pdf/1908.08928v1.pdf |
+| tf-pose-estimation | https://github.com/ildoonet/tf-pose-estimation | 
+| Realtime-Action-Recognition | https://github.com/felixchenfy/Realtime-Action-Recognition | 
 
 
