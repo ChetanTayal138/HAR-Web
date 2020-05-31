@@ -86,6 +86,8 @@ This is a very basic service that serves the front page for the web app and rout
 
 ![alt text](https://github.com/ChetanTayal138/HAR-Web/blob/master/Frontend/assets/rsz_recog.png)
 
+You can view the service here http://35.240.156.121/ , which has been deployed on Google Cloud's K8S cluster. 
+
 # 7. Future Work 
 
 Ideally I would like to deploy this on a cloud provider like AWS where anyone can access the service to recognize the actions as groups of 'presets' or train their own classes and use it on the go 
